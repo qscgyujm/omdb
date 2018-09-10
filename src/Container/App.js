@@ -4,7 +4,7 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Main from '../Component/Main/Main';
 import {
-  BrowserRouter as Router,
+  BrowserRouter as Router, HashRouter
 } from 'react-router-dom';
 
 
@@ -13,9 +13,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Router>
+        <HashRouter>
           <Main />
-        </Router>
+        </HashRouter>
         <Footer />
       </div>
     );

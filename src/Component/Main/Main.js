@@ -16,6 +16,7 @@ class Main extends Component {
     currentPage: 1,
     hasData: false,
     hasError: false,
+    hasDetail: false,
     data: null,
     detailData: null
   }
@@ -88,7 +89,10 @@ class Main extends Component {
         return res.data
       })
       .then(detailData => {
-        this.setState({ detailData })
+        this.setState({ 
+          hasDetail: true,
+          detailData 
+        })
       })
       .catch(e => {
         console.log('ERROR');
@@ -113,7 +117,7 @@ class Main extends Component {
   }
 
   render() {
-    const { title, year, type, options, hasData, hasError, data, detailData, totalPage, currentPage } = this.state;
+    const { title, year, type, options, hasData, hasDetail, hasError, data, detailData, totalPage, currentPage } = this.state;
     const { changeTitleHandler, changeYearHandler, changeSelectHander, submitHandler, getDetailHandler, changeCurrentPage } = this;
 
     return (
@@ -146,7 +150,9 @@ class Main extends Component {
             />
           }} />
           <Route path='/detail' render={() => {
-            return <Detail {...detailData} />
+            return <Detail {...detailData} 
+              hasDetail={hasDetail}
+            />
           }} />
         </Switch>
       </div>

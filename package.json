@@ -1,8 +1,8 @@
 {
   "name": "omdb",
-  "homepage": "http://qscgyujm.github.io/omdb",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://qscgyujm.github.io/omdb",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
@@ -55,7 +55,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
