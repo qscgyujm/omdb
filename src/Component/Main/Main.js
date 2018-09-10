@@ -69,7 +69,7 @@ class Main extends Component {
           data: data.Search,
           hasData: true,
           hasError: false,
-          totalPage: parseInt(data.totalResults)/10
+          totalPage: parseInt(data.totalResults / 10 )
         })
       })
       .catch(e => {

@@ -1,15 +1,25 @@
 .items{
   color: black;
   .header{
-    
+    font-size: 2.5rem;
+    background-color: gray;
+    padding: 10px 15px;
   }
   .list{
-    padding: 0px 30px;
+    padding: 30px 15px;
     .item{
-      img{
-        height: 200px;
-        width: 200px;
+      .img{
+        height: 150px;
+        width: 100%;
+        
+        img{
+          height: 150px;
+          width: 150px;
+        }
       }
+    }
+    p{
+      text-align: left;
     }
   }
 

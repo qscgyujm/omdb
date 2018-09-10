@@ -8,7 +8,9 @@ const Item = (props) => {
   return (
     <div className='col-2 item'>
       <Link to='/detail' onClick={() => getDetailHandler(imdbID)} >
-        <img src={Poster} alt="" />
+        <div className='img' >
+          <img src={Poster} alt="" />
+        </div>
         <p>{Title}</p>
       </Link>
     </div>
